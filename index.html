@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card | Frontend Wizards</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+
+<body>
+    <article data-testid="test-profile-card" class="profile-card">
+
+
+        <div class="avatar-container">
+            <div class="date-time">
+                <span id="formatted-time"></span>
+            </div>
+        </div>
+
+        <div class="content-parent">
+            <header >
+                <h2>
+                    Ken Travis
+                </h2>
+                <i class="fa-solid fa-ribbon"></i>
+            </header>
+
+
+            <p data-testid="test-user-bio">
+                I&apos;m a frontend developer passionate about building clean, accessible web
+                interfaces and experimenting with modern UI patterns.
+            </p>
+
+            <p class="timestamp">
+                Current time in ms: <span data-testid="test-user-time"></span><br />
+                <!-- Formatted: <span id="formatted-time"></span> -->
+            </p>
+
+            <nav aria-label="Social links" data-testid="test-user-social-links">
+                <ul>
+                    <li>
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <a href="https://twitter.com/" data-testid="test-user-social-twitter" target="_blank"
+                            rel="noopener noreferrer">Twitter</a>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-github"></i>
+                        <a href="https://github.com/" data-testid="test-user-social-github" target="_blank"
+                            rel="noopener noreferrer">GitHub</a>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <a href="https://linkedin.com/" data-testid="test-user-social-linkedin" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <section class="buttons">
+                <button id="open-hobbies" aria-haspopup="dialog" aria-controls="hobbies-modal">
+                    View Hobbies
+                </button>
+                <button id="open-dislikes" aria-haspopup="dialog" aria-controls="dislikes-modal">
+                    View Dislikes
+                </button>
+            </section>
+    </article>
+
+    <!-- Hobbies Modal -->
+    <!-- <dialog id="hobbies-modal" data-testid="test-user-hobbies">
+        <h3>My Hobbies</h3>
+        <ul>
+            <li>Coding</li>
+            <li>Photography</li>
+            <li>Traveling</li>
+        </ul>
+        <button class="close-modal" id="close-hobbies"><i class="fa-solid fa-xmark"></i></button>
+    </dialog>
+
+    Dislikes Modal
+    <dialog id="dislikes-modal" data-testid="test-user-dislikes">
+        <h3>Things I Dislike</h3>
+        <ul>
+            <li>Slow Wi-Fi</li>
+            <li>Cluttered UI</li>
+            <li>Unclear documentation</li>
+        </ul>
+        <button class="close-modal" id="close-dislikes"><i class="fa-solid fa-xmark"></i></button>
+    </dialog> -->
+    </div>
+
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
