@@ -1,169 +1,247 @@
+/* Base Styles */
 body {
-    font-family: system-ui, sans-serif;
-    background: linear-gradient(135deg, #e0f2ff, #fefefe);
+    font-family: "Quicksand", "Poppins", sans-serif;    background: linear-gradient(135deg, #f4e8ff, #faf7ff);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem;
     min-height: 100vh;
+    color: #333;
   }
   
+  /* Profile Card */
   .profile-card {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(126, 87, 194, 0.15);
     max-width: 420px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 10px;
-  }
-
-  header{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  header i{
-    margin-top: 6px;
-    color: red;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
   }
   
+  .profile-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(126, 87, 194, 0.25);
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    gap: 10px;
+  }
+  
+  header i {
+    color: #7e57c2;
+    font-size: 1.2rem;
+    margin-top: 6px;
+  }
+  
+  /* Avatar Section */
   .avatar-container {
-    width: 96%;
+    width: 100%;
     height: 15rem;
     display: flex;
     position: relative;
     overflow: hidden;
-    background-color: red;
-    border-radius: 8px;
-    padding: 0.5rem;
+    border-radius: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: url(/dev.jfif);
   }
-
+  
   .avatar-container img {
-    height: 10rem;
-    flex: 1;
-    display: flex;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
-
-  .content-parent{
-    padding-left: 1rem;
-    padding-right: 1rem;
+  
+  /* Content Area */
+  .content-parent {
+    padding: 1rem 1.5rem;
   }
-
-  .date-time{
-    background-color: white;
+  
+  .date-time {
+    background-color: #f8f4ff;
+    border: 1px solid #e1d7f7;
     height: 2.5rem;
-    border-radius:34rem;
+    border-radius: 50px;
     min-width: 12rem;
-    padding: 0px 1rem;
+    padding: 0 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 500;
+    color: #6a4ba0;
+    margin: 0.5rem 1rem;
   }
-
-  .timestamp{
+  
+  .timestamp {
     display: none;
   }
   
+  /* Navigation Links */
   nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
   }
   
   nav a {
-    color: #0077ff;
+    color: #413a4d;
     text-decoration: none;
     font-weight: 500;
+    transition: color 0.2s;
   }
   
-  nav a:focus,
-  nav a:hover {
+  nav a:hover,
+  nav a:focus {
+    color: #5e35b1;
     text-decoration: underline;
   }
   
+  /* Buttons */
   .buttons {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
   }
   
   button {
-    background: #757575;
+    background: #413a4d;
     color: white;
     border: none;
     border-radius: 6px;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.2s, transform 0.2s;
+    font-weight: 500;
   }
   
   button:hover,
   button:focus {
-    background: #005fcc;
+    background: #6a4ba0;
+    transform: scale(1.05);
     outline: none;
   }
   
   /* Modal Styles */
   dialog {
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 1.5rem;
-    max-width: 400px;
+    max-width: 420px;
     width: 90%;
-    /* position: relative; */
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    position: relative;
+    animation: fadeIn 0.3s ease;
   }
-
-  dialog ul{
+  
+  dialog ul {
     display: flex;
-    gap: 1rem;
+    gap: 0.75rem;
     flex-wrap: wrap;
     padding: 0;
+    margin-top: 1rem;
   }
-
-  dialog ul li{
+  
+  dialog ul li {
     list-style: none;
-    padding: 4px 10px;
+    padding: 6px 12px;
     border-radius: 8px;
     min-width: fit-content;
-    background-color: #a8a8a83a;
-    
+    background-color: #f3e8ff;
+    color: #4a3278;
+    font-weight: 500;
   }
   
   dialog::backdrop {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.6);
   }
   
+  /* Close Modal Button */
   .close-modal {
     position: absolute;
-    top: 4px;
-    right: 4px;
-    background: #a8a8a8;
+    top: 8px;
+    right: 8px;
+    background: #b9b9b9;
     border-radius: 50%;
     height: 2rem;
     width: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background 0.2s;
+    cursor: pointer;
   }
   
-  .close-modal i{
+  .close-modal i {
     color: #000;
+    font-size: 1.1rem;
   }
   
   .close-modal:hover {
-    background: #7e7e7e;
+    background: #adadad;
   }
   
-  /* Responsive layout */
-  @media (max-width: 700px) {
-
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .profile-card {
+      max-width: 90%;
+    }
+  
+    /* header {
+      flex-direction: column;
+      align-items: flex-start;
+    } */
+  
+    .avatar-container {
+      height: 12rem;
+    }
+  
+    .buttons {
+      justify-content: center;
+    }
+  
+    button {
+      flex: 1;
+      min-width: 120px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      padding: 1rem;
+    }
+  
+    .avatar-container {
+      height: 10rem;
+    }
+  
+    .date-time {
+      font-size: 0.9rem;
+    }
+  
+    .content-parent {
+      padding: 1rem;
+    }
+  
+    dialog {
+      padding: 1rem;
+    }
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
   }
   
