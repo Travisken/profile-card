@@ -1,0 +1,71 @@
+/* Base layout */
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background-color: #f6f6f6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Container */
+.about-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem;
+  margin-top: 3rem;
+  width: 90%;
+  max-width: 800px;
+}
+
+/* Heading styles */
+h1 {
+  text-align: center;
+  color: #1f1f1f;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  color: #2c2c2c;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+/* Paragraph styles */
+.about-section {
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: #444;
+}
+
+/* Highlighted text */
+.highlight-strong {
+  font-weight: 600;
+  color: #1e1e1e;
+}
+
+.highlight-gray {
+  font-weight: 500;
+  color: #666;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .about-container {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
