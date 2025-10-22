@@ -46,3 +46,21 @@ document.getElementById("close-dislikes").addEventListener("click", () => {
     if (e.key === "Escape") modal.close();
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const menuList = document.getElementById("menu-list");
+
+  // Toggle dropdown visibility
+  menuToggle.addEventListener("click", () => {
+    menuList.classList.toggle("hidden");
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!menuToggle.contains(e.target) && !menuList.contains(e.target)) {
+      menuList.classList.add("hidden");
+    }
+  });
+});
+

@@ -21,7 +21,7 @@
         </div>
 
         <div class="content-parent">
-            <header >
+            <header>
                 <h2>
                     Kensuomo Travis
                 </h2>
@@ -43,8 +43,8 @@
                 <ul>
                     <li>
                         <i class="fa-brands fa-x-twitter"></i>
-                        <a href="https://x.com/kentrav81649556?s=21" data-testid="test-user-social-twitter" target="_blank"
-                            rel="noopener noreferrer">Twitter</a>
+                        <a href="https://x.com/kentrav81649556?s=21" data-testid="test-user-social-twitter"
+                            target="_blank" rel="noopener noreferrer">Twitter</a>
                     </li>
                     <li>
                         <i class="fa-brands fa-github"></i>
@@ -53,8 +53,8 @@
                     </li>
                     <li>
                         <i class="fa-brands fa-linkedin"></i>
-                        <a href="https://linkedin.com/in/travisken" data-testid="test-user-social-linkedin" target="_blank"
-                            rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://linkedin.com/in/travisken" data-testid="test-user-social-linkedin"
+                            target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     </li>
                 </ul>
             </nav>
@@ -66,11 +66,19 @@
                 <button id="open-dislikes" aria-haspopup="dialog" aria-controls="dislikes-modal">
                     View Dislikes
                 </button>
+                <div class="dropdown-menu">
+                    <i class="fa-solid fa-bars" id="menu-toggle"></i>
+                    <ul id="menu-list" class="hidden">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
             </section>
     </article>
 
     <!-- Hobbies Modal -->
-   <dialog id="hobbies-modal" data-testid="test-user-hobbies">
+    <dialog id="hobbies-modal" data-testid="test-user-hobbies">
         <h3>My Hobbies</h3>
         <ul>
             <li>Coding</li>
