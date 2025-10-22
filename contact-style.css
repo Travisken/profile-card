@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Quicksand", "Poppins", sans-serif;
+    background: linear-gradient(135deg, #f4e8ff, #faf7ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    color: #333;
+
+}
+
+.span-txt {
+    font-weight: 200;
+    font-size: small;
+    text-transform: uppercase;
+}
+
+.span-head {
+    font-weight: 600;
+
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+
+
+}
+
+section .sect {
+    flex: 1;
+    /* background-color: red; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+.left {
+    padding: 0px 4rem;
+}
+
+.left-pgh {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.left-head-pgh {
+    margin: 0 !important;
+    font-size: 4rem;
+}
+
+.left-sub-pgh {
+    width: 70%;
+    margin-top: 2rem;
+    color: #5151518f;
+}
+
+.fa-solid{
+    color: #515151;
+    font-size: 2rem;
+}
+
+.contact-info{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+}
+
+.contact-mail , .contact-phone{
+    font-weight: 700;
+    color: #5151518f;
+}
+
+.contacts{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+.right form{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.right form input, textarea{
+ border: none;
+ outline: none;
+ width: 100%;
+ padding: 14px 8px;
+ color: #515151;
+ border-radius: 12px;
+ margin-top: 6px;
+}
+
+.contact-btn{
+    border-radius: 4rem;
+    padding: 12px 20px;
+    background-color: #000;
+    color: white;
+}
+
