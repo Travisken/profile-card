@@ -2,98 +2,85 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact-Travis</title>
-    <link rel="stylesheet" href="contact-style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Travis</title>
+  <link rel="stylesheet" href="contact-style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
-    <section>
-        <div class="sect left">
+  <section>
+    <div class="sect left">
+      <div class="left-pgh">
+        <span class="span-txt">Reach out for consultation</span>
+        <p class="left-head-pgh">
+          <strong class="span-head">Discuss</strong> your Technical Solutions and software needs
+        </p>
+        <p class="left-sub-pgh">
+          Are you looking for a top-quality software developer tailored to your needs? Reach out to me.
+        </p>
 
-            <div class="left-pgh">
-                <span class="span-txt">
-                    Reach out for consultation
-                </span>
-                <p class="left-head-pgh">
-                    <strong class="span-head">
-                        Discuss
-                    </strong>
-                    your Technical Solutions and software needs
-                </p>
-
-                <p class="left-sub-pgh">
-                    Are you looking a top-quality software developer tailored to your needs? reach out to me.
-                </p>
-
-                <div class="contacts">
-                    <div class="contact-info mail-card">
-                        <i class="fa-solid fa-envelope"></i>
-                        <div>
-                            <p>E-mail</p>
-                            <p class="contact-mail">
-                                kentravis37@gmail.com
-                            </p>
-                        </div>
-
-                    </div>
-
-
-                    <div class="contact-info mail-card">
-                        <i class="fa-solid fa-phone"></i>
-                        <div>
-                            <p>Phone number</p>
-                            <p class="contact-phone">
-                                +234 7039444495
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
+        <div class="contacts">
+          <div class="contact-info">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <p>E-mail</p>
+              <p class="contact-mail">kentravis37@gmail.com</p>
             </div>
+          </div>
+
+          <div class="contact-info">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <p>Phone number</p>
+              <p class="contact-phone">+234 7039444495</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sect right">
+      <form id="contact-form" novalidate>
+        <div>
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Full Name" data-testid="test-contact-name"
+            aria-describedby="test-contact-error-name" />
+          <div id="test-contact-error-name" class="error" data-testid="test-contact-error-name"></div>
         </div>
 
-        <div class="sect right">
-            <form action="">
-                <div>
-                    <label for="name">
-                        Name
-                    </label>
-                    <input type="text" placeholder=" Full Name" id="name" name="name">
-                </div>
-
-
-                <div>
-                    <label for="Email">
-                        Email
-                    </label>
-                    <input type="text" placeholder="Email" id="Email" name="Email">
-                </div>
-
-                <div>
-                    <label for="Industry">
-                        Industry
-                    </label>
-                    <input type="text" placeholder="Industry" id="Industry" name="Industry">
-                </div>
-
-
-                <div>
-                    <label for="message">
-                        Message
-                    </label>
-                    <textarea placeholder="Message" id="message" name="message">
-                </div>
-
-                <button class="contact-btn"> 
-                    Get in contact
-                </button>
-            </form>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Email" data-testid="test-contact-email"
+            aria-describedby="test-contact-error-email" />
+          <div id="test-contact-error-email" class="error" data-testid="test-contact-error-email"></div>
         </div>
 
-    </section>
+        <div>
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject" data-testid="test-contact-subject"
+            aria-describedby="test-contact-error-subject" />
+          <div id="test-contact-error-subject" class="error" data-testid="test-contact-error-subject"></div>
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Message" data-testid="test-contact-message"
+            aria-describedby="test-contact-error-message"></textarea>
+          <div id="test-contact-error-message" class="error" data-testid="test-contact-error-message"></div>
+        </div>
+
+        <button type="submit" class="contact-btn" data-testid="test-contact-submit">Get in contact</button>
+
+        <div id="success-message" class="success" data-testid="test-contact-success" style="display: none;">
+          ✅ Your message has been sent successfully!
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script src="contact.js"></script>
 </body>
 
 </html>
